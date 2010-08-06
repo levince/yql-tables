@@ -1,0 +1,31 @@
+<table>
+−
+<meta>
+<author>13 PASS MULTIMEDIA SARL</author>
+<documentationURL>http://www.leboncoin.fr/</documentationURL>
+−
+<sampleQuery>
+select * from {table} where region="aquitaine" and dept="gironde" and type="ventes_immobilieres" and recherche="bordeaux"
+</sampleQuery>
+</meta>
+−
+<bindings>
+−
+<select itemPath="" produces="XML">
+−
+<urls>
+−
+<url>
+http://www.leboncoin.fr/{type}/offres/{region}/{dept}/?q={recherche}
+</url>
+</urls>
+−
+<inputs>
+<key id="region" type="xs:string" paramType="path" required="true"/>
+<key id="dept" type="xs:string" paramType="path" required="true"/>
+<key id="type" type="xs:string" paramType="path" required="true"/>
+<key id="recherche" type="xs:string" paramType="query" required="false"/>
+</inputs>
+</select>
+</bindings>
+</table>
